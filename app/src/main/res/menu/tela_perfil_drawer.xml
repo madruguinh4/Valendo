@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnBuscarServico"
+            android:title="Buscar Serviço" />
+        <item
+            android:id="@+id/btnServicoAgendado"
+            android:title="Serviços Agendados" />
+        <item
+            android:id="@+id/btnEditaPerdil"
+            android:title="Editar Perfil" />
+        <item
+            android:id="@+id/btnHelp"
+            android:title="Help" />
+    </group>
+
+
+</menu>

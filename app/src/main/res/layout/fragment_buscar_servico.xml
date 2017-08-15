@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_buscar_servico"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.david_pc.valendo.FragmentBuscarServico">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#000000"
+        android:textStyle="italic"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:hint="Digite o Servico que procura"
+        android:inputType="textPersonName"
+        android:layout_marginTop="67dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/editText12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ListView
+            android:id="@+id/ListServicos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false" />
+    </LinearLayout>
+
+</RelativeLayout>

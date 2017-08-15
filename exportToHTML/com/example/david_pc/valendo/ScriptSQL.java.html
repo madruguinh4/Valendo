@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>ScriptSQL.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+ScriptSQL.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.david_pc.valendo; 
+ 
+</span><span class="s2">/** 
+ * Created by George on 12/07/2017. 
+ */</span><span class="s1"> 
+</span><span class="s0">public class </span><span class="s1">ScriptSQL { 
+ 
+    </span><span class="s2">//static para evitar a criação da instancia Scrip.</span><span class="s1"> 
+    </span><span class="s0">public static </span><span class="s1">String getCreateLogin() 
+    { 
+        </span><span class="s2">// Serve para concatenar o script.</span><span class="s1"> 
+        </span><span class="s2">// Conteudo muito grande de String</span><span class="s1"> 
+        </span><span class="s2">// Adicionar um espaço para pular linha</span><span class="s1"> 
+        StringBuilder sqlBuilder = </span><span class="s0">new </span><span class="s1">StringBuilder(); 
+        sqlBuilder.append(</span><span class="s3">&quot;Create table if not exists login &quot;</span><span class="s1">); 
+        sqlBuilder.append(</span><span class="s3">&quot;_id  integer not null &quot;</span><span class="s1">); 
+        sqlBuilder.append(</span><span class="s3">&quot;primary key autoincrement &quot;</span><span class="s1">); 
+        sqlBuilder.append(</span><span class="s3">&quot;login varchar (60), &quot;</span><span class="s1">); 
+        sqlBuilder.append(</span><span class="s3">&quot;Senha varchar (60), &quot;</span><span class="s1">); 
+        sqlBuilder.append(</span><span class="s3">&quot;); &quot;</span><span class="s1">); 
+ 
+        </span><span class="s2">//retornando o conteudo criado acima.</span><span class="s1"> 
+        </span><span class="s0">return </span><span class="s1">sqlBuilder.toString(); 
+    } 
+}</span></pre>
+</body>
+</html>

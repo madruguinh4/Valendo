@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>BancoFelix.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+BancoFelix.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.david_pc.valendo; 
+ 
+</span><span class="s2">/** 
+ * Created by George on 12/07/2017. 
+ */</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">android.content.Context; 
+</span><span class="s0">import </span><span class="s1">android.database.sqlite.*; 
+ 
+</span><span class="s0">public class </span><span class="s1">BancoFelix </span><span class="s0">extends </span><span class="s1">SQLiteOpenHelper{ 
+    </span><span class="s2">// instanciando o nome do banco e a versão do mesmo.</span><span class="s1"> 
+    </span><span class="s0">private static final </span><span class="s1">String NOME_BD = </span><span class="s3">&quot;banco_felix&quot;</span><span class="s1">; 
+    </span><span class="s0">private static final int </span><span class="s1">VERSAO_BD = </span><span class="s4">1</span><span class="s1">; 
+ 
+    </span><span class="s0">public </span><span class="s1">BancoFelix(Context cont) 
+    { 
+        </span><span class="s2">// chamando o construtor da classe pai</span><span class="s1"> 
+        </span><span class="s2">// Informando nome do banco e a versão,</span><span class="s1"> 
+        </span><span class="s0">super</span><span class="s1">(cont,NOME_BD,</span><span class="s0">null</span><span class="s1">,VERSAO_BD); 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">onCreate(SQLiteDatabase db) { 
+        </span><span class="s2">// Passando o script para criação da tabela:</span><span class="s1"> 
+        db.execSQL(ScriptSQL.getCreateLogin()); 
+ 
+ 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">onUpgrade(SQLiteDatabase db, </span><span class="s0">int </span><span class="s1">oldVersion, </span><span class="s0">int </span><span class="s1">newVersion) { 
+ 
+    } 
+} 
+</span></pre>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.david_pc.valendo.TelaSelecionaServicoPrestador">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:id="@+id/spnTelaSeleciona_Servico_Prestador1"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="57dp" />
+
+        <Spinner
+            android:id="@+id/spnTelaSeleciona_Servico_Prestador2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spnTelaSeleciona_Servico_Prestador1"
+            android:layout_centerHorizontal="false"
+            android:layout_marginTop="46dp" />
+
+        <Spinner
+            android:id="@+id/spnTelaSeleciona_Servico_Prestador3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spnTelaSeleciona_Servico_Prestador2"
+            android:layout_marginTop="48dp" />
+
+        <Spinner
+            android:id="@+id/spnTelaSeleciona_Servico_Prestador4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spnTelaSeleciona_Servico_Prestador3"
+            android:layout_marginTop="72dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/button2"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:text="Button" />
+    </RelativeLayout>
+</LinearLayout>

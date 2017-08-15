@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>FragmentBuscarServico.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,255); }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+FragmentBuscarServico.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.david_pc.valendo; 
+ 
+ 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.support.v4.app.Fragment; 
+</span><span class="s0">import </span><span class="s1">android.view.LayoutInflater; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.view.ViewGroup; 
+</span><span class="s0">import </span><span class="s1">android.widget.ArrayAdapter; 
+</span><span class="s0">import </span><span class="s1">android.widget.ListView; 
+ 
+</span><span class="s0">import </span><span class="s1">java.lang.reflect.Array; 
+</span><span class="s0">import </span><span class="s1">java.util.ArrayList; 
+ 
+ 
+</span><span class="s0">public class </span><span class="s1">FragmentBuscarServico </span><span class="s0">extends </span><span class="s1">Fragment { 
+    </span><span class="s0">private </span><span class="s1">View telaBuscarServico; 
+    </span><span class="s0">private </span><span class="s1">ListView lista; 
+    </span><span class="s0">private </span><span class="s1">ArrayList&lt;String&gt; servicos; 
+ 
+    @Override 
+    </span><span class="s0">public </span><span class="s1">View onCreateView(LayoutInflater inflater, ViewGroup container, 
+                             Bundle savedInstanceState) { 
+       telaBuscarServico = inflater.inflate(R.layout.fragment_buscar_servico, container, </span><span class="s0">false</span><span class="s1">); 
+ 
+        servicos = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;(); 
+        lista = (ListView) telaBuscarServico.findViewById(R.id.ListServicos); 
+        ArrayAdapter adapter = </span><span class="s0">new </span><span class="s1">ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, servicos); 
+        lista.setAdapter(adapter); 
+ 
+        Array[] testes = </span><span class="s0">new </span><span class="s1">Array [</span><span class="s2">10</span><span class="s1">]; 
+ 
+        </span><span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s2">0</span><span class="s1">; i &lt; testes.length; i ++) { 
+            </span><span class="s0">int </span><span class="s1">count = </span><span class="s2">0</span><span class="s1">; 
+            servicos.add(</span><span class="s3">&quot;Servicos   &quot; </span><span class="s1">+ i); 
+ 
+        } 
+ 
+ 
+ 
+        </span><span class="s0">return </span><span class="s1">telaBuscarServico; 
+ 
+    } 
+} 
+</span></pre>
+</body>
+</html>

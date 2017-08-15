@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>FragmentTelaServicosAgendados.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+FragmentTelaServicosAgendados.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.david_pc.valendo; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.support.v4.app.Fragment; 
+</span><span class="s0">import </span><span class="s1">android.view.LayoutInflater; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.view.ViewGroup; 
+</span><span class="s0">import </span><span class="s1">android.widget.AdapterView; 
+</span><span class="s0">import </span><span class="s1">android.widget.ArrayAdapter; 
+</span><span class="s0">import </span><span class="s1">android.widget.ListView; 
+ 
+</span><span class="s0">import </span><span class="s1">java.lang.reflect.Array; 
+</span><span class="s0">import </span><span class="s1">java.util.ArrayList; 
+ 
+ 
+</span><span class="s0">public class </span><span class="s1">FragmentTelaServicosAgendados </span><span class="s0">extends </span><span class="s1">Fragment { 
+    </span><span class="s0">private </span><span class="s1">View telaServicosAgendados; 
+    </span><span class="s0">private </span><span class="s1">ListView servicosAgendados; 
+    </span><span class="s0">private </span><span class="s1">ArrayList&lt;String&gt; ArrayservicosAgendados; 
+    </span><span class="s0">private static final </span><span class="s1">String ARG_PARAM1 = </span><span class="s2">&quot;param1&quot;</span><span class="s1">; 
+    </span><span class="s0">private static final </span><span class="s1">String ARG_PARAM2 = </span><span class="s2">&quot;param2&quot;</span><span class="s1">; 
+ 
+    @Override 
+    </span><span class="s0">public </span><span class="s1">View onCreateView(LayoutInflater inflater, ViewGroup container, 
+                             Bundle savedInstanceState) { 
+ 
+        telaServicosAgendados = inflater.inflate(R.layout.fragment_tela_servicos_agendados, container, </span><span class="s0">false</span><span class="s1">); 
+ 
+        ArrayservicosAgendados = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;(); 
+        servicosAgendados = (ListView) telaServicosAgendados.findViewById(R.id.ListviewServicosAgendandos); 
+        ArrayAdapter adapter = </span><span class="s0">new </span><span class="s1">ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, ArrayservicosAgendados); 
+        servicosAgendados.setAdapter(adapter); 
+ 
+        Array[] testes = </span><span class="s0">new </span><span class="s1">Array[</span><span class="s3">15</span><span class="s1">]; 
+ 
+        </span><span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s3">0</span><span class="s1">; i &lt; testes.length; i++) { 
+           ArrayservicosAgendados.add(</span><span class="s2">&quot;Servicos Agendandos  &quot; </span><span class="s1">+ i); 
+        } 
+        servicosAgendados.setOnItemClickListener(</span><span class="s0">new </span><span class="s1">AdapterView.OnItemClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onItemClick(AdapterView&lt;?&gt; adapterView, View view, </span><span class="s0">int </span><span class="s1">i, </span><span class="s0">long </span><span class="s1">l) { 
+                Intent intent = </span><span class="s0">new </span><span class="s1">Intent(getActivity(), TelaLogin.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(intent); 
+            } 
+        }); 
+ 
+ 
+ 
+        </span><span class="s0">return  </span><span class="s1">telaServicosAgendados; 
+    } 
+ 
+} 
+</span></pre>
+</body>
+</html>

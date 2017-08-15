@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>TelaLogin.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+TelaLogin.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.david_pc.valendo; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AlertDialog; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+</span><span class="s0">import </span><span class="s1">android.widget.EditText; 
+</span><span class="s0">import </span><span class="s1">android.widget.TextView; 
+</span><span class="s0">import </span><span class="s1">android.database.sqlite.*; 
+</span><span class="s0">import </span><span class="s1">android.database.*; 
+ 
+</span><span class="s0">public class </span><span class="s1">TelaLogin </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+ 
+    EditText editEmail, editSenha; 
+    Button btnLogin; 
+    TextView txtCadastro; 
+ 
+    </span><span class="s2">//George banco</span><span class="s1"> 
+    </span><span class="s0">private </span><span class="s1">BancoFelix bancoFelix; 
+    </span><span class="s2">//Criando a referencia com o banco.</span><span class="s1"> 
+    </span><span class="s0">private </span><span class="s1">SQLiteDatabase conn; 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.tela_login); 
+ 
+ 
+        editEmail = (EditText) findViewById(R.id.ediEmail1); 
+        editSenha = (EditText) findViewById(R.id.editSenha1); 
+        btnLogin = (Button)findViewById(R.id.btnLogin); 
+        txtCadastro = (TextView) findViewById(R.id.txtCadastro); 
+ 
+        </span><span class="s2">// Sempre que trabalhar com conexao do banco</span><span class="s1"> 
+        </span><span class="s0">try</span><span class="s1">{ 
+            bancoFelix = </span><span class="s0">new </span><span class="s1">BancoFelix(</span><span class="s0">this</span><span class="s1">); 
+            conn = bancoFelix.getWritableDatabase(); 
+            AlertDialog.Builder dlg = </span><span class="s0">new </span><span class="s1">AlertDialog.Builder(</span><span class="s0">this</span><span class="s1">); 
+            dlg.setMessage(</span><span class="s3">&quot;Conexão criada com sucesso&quot;</span><span class="s1">); 
+            dlg.setNeutralButton(</span><span class="s3">&quot;ok&quot;</span><span class="s1">,</span><span class="s0">null</span><span class="s1">); 
+            dlg.show(); 
+ 
+        } </span><span class="s0">catch </span><span class="s1">(SQLException ex) 
+        { 
+            AlertDialog.Builder dlg = </span><span class="s0">new </span><span class="s1">AlertDialog.Builder(</span><span class="s0">this</span><span class="s1">); 
+            dlg.setMessage(</span><span class="s3">&quot;Erro na conexão&quot;</span><span class="s1">+ex.getMessage()); 
+            dlg.setNeutralButton(</span><span class="s3">&quot;ok&quot;</span><span class="s1">,</span><span class="s0">null</span><span class="s1">); 
+            dlg.show(); 
+        } 
+ 
+        txtCadastro.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent abrirTelaSelecaoCadastro = </span><span class="s0">new </span><span class="s1">Intent(TelaLogin.</span><span class="s0">this</span><span class="s1">, TelaSelecaoCadastro.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(abrirTelaSelecaoCadastro); 
+            } 
+        }); 
+ 
+    } 
+} 
+</span></pre>
+</body>
+</html>

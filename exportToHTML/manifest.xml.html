@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>manifest.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); font-style: italic; }
+.s1 { color: rgb(0,0,255); font-weight: bold; }
+.s2 { color: rgb(0,0,0); }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,0); }
+.s5 { color: rgb(0,0,128); font-weight: bold; }
+.s6 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+manifest.xml</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">&lt;?</span><span class="s1">xml version=</span><span class="s3">&quot;1.0&quot; </span><span class="s1">encoding=</span><span class="s3">&quot;utf-8&quot;</span><span class="s0">?&gt;</span><span class="s4"> 
+</span><span class="s2">&lt;</span><span class="s5">manifest </span><span class="s1">xmlns:android=</span><span class="s3">&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="s2"> 
+    </span><span class="s1">xmlns:uses-permissionandroid=</span><span class="s3">&quot;http://schemas.android.com/apk/res-auto&quot;</span><span class="s2"> 
+    </span><span class="s1">package=</span><span class="s3">&quot;com.example.david_pc.valendo&quot;</span><span class="s2"> 
+    </span><span class="s1">android:versionCode=</span><span class="s3">&quot;1&quot;</span><span class="s2"> 
+    </span><span class="s1">android:versionName=</span><span class="s3">&quot;1.0&quot; </span><span class="s2">&gt;</span><span class="s4"> 
+ 
+    </span><span class="s2">&lt;</span><span class="s5">uses-sdk</span><span class="s2"> 
+        </span><span class="s1">android:minSdkVersion=</span><span class="s3">&quot;15&quot;</span><span class="s2"> 
+        </span><span class="s1">android:targetSdkVersion=</span><span class="s3">&quot;23&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+ 
+    </span><span class="s6">&lt;!-- Include required permissions for Google Maps API to run. --&gt;</span><span class="s4"> 
+    </span><span class="s2">&lt;</span><span class="s5">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.ACCESS_NETWORK_STATE&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+    </span><span class="s2">&lt;</span><span class="s5">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.INTERNET&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+ 
+    </span><span class="s2">&lt;</span><span class="s5">uses-feature</span><span class="s2"> 
+        </span><span class="s1">android:glEsVersion=</span><span class="s3">&quot;0x00020000&quot;</span><span class="s2"> 
+        </span><span class="s1">android:required=</span><span class="s3">&quot;true&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+ 
+    </span><span class="s2">&lt;</span><span class="s5">application</span><span class="s2"> 
+        </span><span class="s1">android:allowBackup=</span><span class="s3">&quot;true&quot;</span><span class="s2"> 
+        </span><span class="s1">android:icon=</span><span class="s3">&quot;@mipmap/ic_launcher&quot;</span><span class="s2"> 
+        </span><span class="s1">android:label=</span><span class="s3">&quot;@string/app_name&quot;</span><span class="s2"> 
+        </span><span class="s1">android:supportsRtl=</span><span class="s3">&quot;true&quot;</span><span class="s2"> 
+        </span><span class="s1">android:theme=</span><span class="s3">&quot;@style/AppTheme&quot; </span><span class="s2">&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaLogin&quot; </span><span class="s2">&gt;</span><span class="s4"> 
+            </span><span class="s2">&lt;</span><span class="s5">intent-filter</span><span class="s2">&gt;</span><span class="s4"> 
+                </span><span class="s2">&lt;</span><span class="s5">action </span><span class="s1">android:name=</span><span class="s3">&quot;android.intent.action.MAIN&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+ 
+                </span><span class="s2">&lt;</span><span class="s5">category </span><span class="s1">android:name=</span><span class="s3">&quot;android.intent.category.LAUNCHER&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+            </span><span class="s2">&lt;/</span><span class="s5">intent-filter</span><span class="s2">&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;/</span><span class="s5">activity</span><span class="s2">&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaCadastroCliente&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaCadastroPrestador&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaSelecaoCadastro&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaEscolheServicoPrestador&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaPerfil&quot;</span><span class="s2"> 
+            </span><span class="s1">android:label=</span><span class="s3">&quot;@string/title_activity_tela_perfil&quot;</span><span class="s2"> 
+            </span><span class="s1">android:theme=</span><span class="s3">&quot;@style/AppTheme.NoActionBar&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaSelecionaServicoPrestador&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;com.example.david_pc.valendo.TelaPerfilDePrestador&quot;</span><span class="s2"> 
+            </span><span class="s1">android:label=</span><span class="s3">&quot;@string/title_activity_tela_perfil_de_prestador&quot;</span><span class="s2"> 
+            </span><span class="s1">android:theme=</span><span class="s3">&quot;@style/AppTheme.NoActionBar&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+        </span><span class="s2">&lt;</span><span class="s5">activity</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;com.google.android.gms.common.api.GoogleApiActivity&quot;</span><span class="s2"> 
+            </span><span class="s1">android:exported=</span><span class="s3">&quot;false&quot;</span><span class="s2"> 
+            </span><span class="s1">android:theme=</span><span class="s3">&quot;@android:style/Theme.Translucent.NoTitleBar&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+ 
+        </span><span class="s2">&lt;</span><span class="s5">meta-data</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;com.google.android.gms.version&quot;</span><span class="s2"> 
+            </span><span class="s1">android:value=</span><span class="s3">&quot;@integer/google_play_services_version&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+ 
+        </span><span class="s2">&lt;</span><span class="s5">provider</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;com.android.tools.fd.runtime.InstantRunContentProvider&quot;</span><span class="s2"> 
+            </span><span class="s1">android:authorities=</span><span class="s3">&quot;com.example.david_pc.valendo.com.android.tools.fd.runtime.InstantRunContentProvider&quot;</span><span class="s2"> 
+            </span><span class="s1">android:multiprocess=</span><span class="s3">&quot;true&quot; </span><span class="s2">/&gt;</span><span class="s4"> 
+    </span><span class="s2">&lt;/</span><span class="s5">application</span><span class="s2">&gt;</span><span class="s4"> 
+ 
+</span><span class="s2">&lt;/</span><span class="s5">manifest</span><span class="s2">&gt;</span></pre>
+</body>
+</html>
